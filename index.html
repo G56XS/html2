@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="Components/Spiderman.ico" />
+<title>
+WebPage
+</title>
+<meta name="viewport" content="width=device width, initial-scale=1">
+<meta name="description" content="Acinonyx">
+<meta property="og:title" content="Acinonyx">
+<meta property="og:image" content="https://media.discordapp.net/attachments/879216795909779536/879217750168440862/Spiderman.jpg?width=610&height=576" />
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  m = checkTime(m);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  
+  return i;
+}
+</script>
+<style>
+body {
+	color: white;
+	background-color: #212F3C;    
+font-family: "Lato", sans-serif;	
+}
+.light-mode {
+	background-color: white;
+	color: black;
+	text-color: black;
+	}
+h1 {
+	text-align: center;
+	animation: color-change 10s infinite;
+}
+@keyframes color-change {                                            
+	 0% {color: #33FFF3;}
+	33% {color: #117A65;}
+	67% {color: #9B59B6;}
+	100%{color: #33FFF3;}
+}
+.myDiv {
+  background-color:#2471A3;
+  border:15px outset lightblue;
+  text-align: center;
+  color: white;
+}
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rainbow {
+	animation: colorchange 60s infinite;
+}
+@keyframes colorchange {
+	 0%  {background: red;}
+	 9%  {background: yellow;}
+	18%  {background: orange;}
+	27%  {background: lightgreen;}
+	36%  {background: darkgreen;}
+	45%  {background: blue;}
+	54%  {background: violet;}
+	63%  {background: purple;}
+	72%  {background: pink;}
+	81%  {background: white;}
+	90%  {background: black;}
+	100% {background: red;}
+}
+a {
+text-decoration: none;
+}
+div {
+	user-select: none;
+}
+button {
+	background-color: #2980B9;
+	border: 5px outset #5DADE2;
+	padding: 5px 10px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s; 
+  padding: 20px;
+}
+txt {
+user-select: none;
+}
+
+</style>
+</head>
+<body>
+<button onclick="myFunction1()">Name</button>
+<p id="demo1"></p>
+<div><script>
+function myFunction1() {
+var txt;
+var person = prompt('Input name', 'Type Your Name Here!');
+if (person == null || person == "") {
+txt = "Please type your name..";
+}else{
+txt = "Hello " + person + " nice to meet you..";
+}
+document.getElementById('demo1').innerHTML = txt;
+} 
+</script><div>
+<h1 style="font-size:50px">Welcome<h1>
+<body onload="startTime()">
+<div id="txt"></div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Colors Menu</button>  
+  
+</div>
+<br>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="Components/red.html"><img src="Components/Cinnabar.jpg"  style="width:100px; height:100px;"></a>
+  <a href="Components/orange.html"><img src="Components/Crab.gif" style="width:100px; height:100px;"></a>
+  <a href="Components/yellow.html"><img src="Components/Yellow.jpg" style="width:100px; height:100px;"></a>
+  <a href="Components/green.html"><img src="Components/Green.gif" style="width:100px; height:100px;"></a>
+    <a href="Components/darkgreen.html"><img src="Components/Darkgreen.jpg" style="width:100px; height:100px;"></a>
+  <a href="Components/blue.html"><img src="Components/blue.gif" style="width:100px; height:100px;"></a>
+    <a href="Components/violet.html"><img src="Components/Violet.jpg" style="width:100px; height:100px;"></a>
+  <a href="Components/pink.html"><img src="Components/Pink.jpg" style="width:100px; height:100px;"></a>
+  <a href="Components/purple.html"><img src="Components/Purple.jpg" style="width:100px; height:100px;"></a>
+  <a href="Components/white.html"><img src="Components/White.jpg" style="width:100px; height:100px;"></a>
+    <a href="Components/black.html"><img src="Components/Walking.gif" style="width:100px; height:100px;"></a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<br>
+<h3>Menu : </h3>
+<br>
+<button title="CLICK HERE TO SEE THE WELCOME MESSAGE" onclick="typeWriter()" color="white" padding="10px 5px" border="2px outset black">Click Here!</button>
+<p id="demo10"></p>
+<script>
+var i = 0;
+var txt = 'This web is made by ME :/. Its not good yet, I will expand this web soon.';
+var speed = 50;
+function typeWriter() {
+if (i<txt.length) {
+document.getElementById('demo10').innerHTML += txt.charAt(i);
+i++;
+setTimeout(typeWriter,speed);
+}
+}
+</script>
+<br>
+<button onclick="theme()" title="NOTE:CLICK THIS BUTTON AGAIN TO GET BACK TO PREVIUS THEME">Dark/Light Mode</button>
+<script>
+function theme() {
+  var element = document.body;
+  element.classList.toggle("light-mode");
+  }
+</script>
+<br>
+<button onclick="theme1()" title="NOTE:CLICK THIS BUTTON AGAIN TO GET BACK TO PREVIUS THEME">Rainbow</button>
+<script>
+function theme1() {
+  var element = document.body;
+  element.classList.toggle("rainbow");
+  }
+</script>
+<br>
+<br>
+<a href="Components/background.html"><span style="color: white"><b>IMAGE</b></span></a>
+<br>
+<hr>
+<label id="textarea" name="textarea" for="textarea">Type anything here :</span></label>
+<br><br>
+<textarea row="4" cols="50">
+</textarea>
+<hr>
+<h2 title="This Music is looping">Music</h2>
+<audio controls loop autoplay>
+     <source src="Components/song.mp3" type="audio/mp3" />     
+ </audio>
+<br>
+<br>
+<hr>
+<br>
+<iframe src="Components/recorder.html" width="500" height="250" align="left"></iframe>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="myDiv">
+<h3 title="CLICK THE PHOTO"><b>Join my Discord</h3>
+<h6 color="white">( CLICK THE PHOTO )</h6>
+<a href="https://discord.gg/Uw5y7EpbZJ"><img src="https://media.discordapp.net/attachments/746323108960534590/765480165219237918/clyde.png?width=100&height=100" "clyde.png" title="CLICK HERE"></a>
+<br>
+<p><span style="color:white">Or copy this link</span></p>
+<br>
+<input type="text" value="https://discord.gg/Uw5y7EpbZJ" id="myInput">
+<button onclick="myFunction()">copy</button>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById('myInput');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  alert('Copied  ' + copyText.value);
+  var copy=prompt('Press CTRL + V to make sure it copied')
+}
+
+</script>
+</div>
+<br>
+<div class="myDiv">
+<h3 title="Link Discord server on the bottom"><b>Thank you for visited this web, I will expand it soon.</b></h3>
+</div>
+<br>
+<a href="Components/colorchange.html"><span style="color:white" title="Click on the left top to go back to the main web"><b>Click here to see the full colorchange html</b></span></p>
+<br>
+<a style="color:white; font-size:10px;" href="Iso Packages.html">My iso packages..</packages></a>
+<br>
+<a style="color:white; font-size:10px;" href="http://192.168.1.160:8888">Pi-hole</a>
+</body>
+</html>
